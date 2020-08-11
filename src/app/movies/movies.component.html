@@ -1,0 +1,28 @@
+<div *ngFor="let item of movies | paginate: config" style="display: inline-block">
+    <div class="container">
+        <div class="movie-card">
+            <div class="movie-header"  style="background: url(https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}); background-size: cover;">
+            </div><!--movie-header-->
+            <div class="movie-content">
+                <div class="movie-content-header">
+                    <a routerLink="/movie-detail/{{item.id}}" id="returnPageNo">
+                        <h3 class="movie-title">{{item.original_title}}</h3>
+                    </a>
+                </div>
+                <div class="movie-info">
+                    <div class="info-section">
+                        <label>Date</label>
+                        <span>{{item.release_date}}</span>
+                    </div><!--date,time-->
+                    <div class="info-section">
+                        <label>Popularity</label>
+                        <span>{{item.popularity}}</span>
+                    </div><!--seat-->
+                </div>
+            </div><!--movie-content-->
+        </div><!--movie-card-->
+    </div>
+</div>
+<div class="list mt-2">
+  <pagination-controls (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls>
+</div>

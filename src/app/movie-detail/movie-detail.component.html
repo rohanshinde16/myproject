@@ -1,0 +1,29 @@
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <h1 class="my-4">{{movie.original_title}}</h1>
+  
+    <!-- Portfolio Item Row -->
+    <div class="row">
+  
+      <div class="col-md-3">
+        <img class="img-fluid" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.poster_path}}" alt="">
+      </div>
+  
+      <div class="col-md-9">
+        <h3 class="my-3">Overview</h3>
+        <p>{{movie.overview}}</p>
+        <h3 class="my-3">Movie Details</h3>
+        <ul>
+          <li>Release Data : {{movie.release_date}}</li>
+          <li>Popularity: {{movie.popularity}}</li>
+          <li>Time: {{movie.runtime}} Min's</li>
+          <li>Ratings: {{movie.vote_average}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <nav>
+      <a routerLink="/movies">Back To Home
+      </a>
+  </nav>
